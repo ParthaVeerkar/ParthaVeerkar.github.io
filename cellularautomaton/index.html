@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+   <title>Cellular Automaton</title>
+<link rel="stylesheet" type="text/css" href="http://parthaveerkar.github.io/cellularautomata/main.css">
+</head>
+<body>
+<div id="menu">
+
+<div id="settingsDiv" class="menuElement">
+	<div class="menuElement">
+	Threshold:
+	<select id="thresholdValue" class="menuElement inputBox">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3" selected>3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+	</select></div>
+	<div class="menuElement">Delay (miliseconds): <input class="inputBox menuElement" id="intervalDelay" type="number" value="100"/><br><span class="help">(delay between state transition)</span></div>
+	<div class="menuElement">Grid Wdith: <input class="inputBox menuElement" id="gridWidth" type="number" value="40"/><br><span class="help">(number of cells in a rows)</span></div>
+	<div class="menuElement">Grid Height: <input class="inputBox menuElement" id="gridHeight" type="number" value="40"/><br><span class="help">(number of rows)</span></div>
+	<div class="menuElement">Cell size (px): <input class="inputBox menuElement" id="cellSize" type="number" value="10"/><br><span class="help">(length of side of each cell)</span></div>
+	<div id="resetButton" class="menuElement buttons">Reset</div>
+	<div id="stepButton" class="menuElement buttons">Step</div>
+
+<div id="onOffButton" class="menuElement buttons">Start</div></div><br>
+<div id="helpButton" class="menuElement buttons">What is this?<br><font size="4px">(help)</font></div>
+</div>
+<table id="tab" cellspacing="0px">
+</table>
+<div id="infoDiv">
+This here is simple <a href="http://en.wikipedia.org/wiki/Cellular_automaton">Cellular Automaton</a>.<br><br>
+The square box is grid containing <span class="settingPointer">Grid Height</span> x <span class="settingPointer">Grid Wdith</span> number of cells.<br>
+Each cell in the grid can have 2 states (on or off).<br>
+(You can turn cells ON or OFF by clicknig inside the grid)<br>
+At any instance, each cell updates itself depending on the state of its <a href="http://en.wikipedia.org/wiki/Moore_neighborhood">neighbors</a>.<br>
+A cell will change its state if more than <span class="settingPointer">threshold</span> number of its neighbors are in the 'on' state. <br><br>
+<div id="buttonsHelp">
+<span class="helpBtn">Step</span> : All cells will update themselves once.<br>
+<span class="helpBtn">Start</span> : Cells keep updating with at interval of <span class="settingPointer">Delay</span> seconds.<br>
+<span class="helpBtn">Reset</span> : Resets the whole thing with the newly selected settings.
+</div>
+<br>
+<span class="note">Note</span> : All the properties mentioned above in <span class="settingPointer">Red</span> can be changed in the menu to the left.
+<br><br>
+<font size="5px" class="settingPointer tryThis">Try these :</font> 
+<br><ol>
+	<li>Turn a few cells ON by clicking inside the box. Try drawing a 'Y' shape.</li>
+	<li>Press start to let it begin</li>
+</ol>
+<br><ol>
+	<li>Change threshold to 1</li>
+	<li>Press start</li>
+	<li>Click inside the box to turn any one cell ON</li>
+	<li>Press stop</li>
+	<li>Change threshold to 3</li>
+	<li>Press start again</li>
+</ol>
+<br><ol>
+	<li>Change the different parameter and try your own!</li>
+</ol>
+<br><br><br>
+</div>
+</body>
+ <script type="text/javascript" src="http://parthaveerkar.github.io/cellularautomata/main.js"></script>
+</html>
